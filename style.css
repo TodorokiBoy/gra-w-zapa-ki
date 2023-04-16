@@ -1,0 +1,370 @@
+html
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+*, ::before, ::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(170, 190, 192) 0%, rgb(80, 94, 107) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.gamePanel
+{
+    height: 80vh;
+    min-width: 1320px;
+    max-width: 1320px;
+    background-color: rgba(0, 0, 0, 0.356);
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+}
+
+.matches
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 58%;
+    border-bottom: 3px solid white;
+}
+
+.matches img
+{
+    max-width: 5%;
+    height: auto;
+    margin: 1px;
+}
+
+.playerPanel
+{
+    background-color: rgba(13, 41, 54, 0.459);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 42%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.currentNumber
+{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.take-matches
+{
+    border-top: 2px dotted white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.take-matches-btn
+{
+    gap: 10px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    display: none;
+}
+.take-matches-btn.active
+{
+    display: flex;
+    gap: 10px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.take-btn
+{
+    display: none;
+}
+
+.take-btn.active
+{
+    display: block;
+}
+
+.take-matches-btn button
+{
+    font-size: 25px;
+    height: 80px;
+    padding: 7px;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-weight:  bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.116);
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.take-matches-btn button:hover
+{
+    font-size: 29px;
+    background-color: rgba(145, 255, 169, 0.438);
+}
+
+.gameOptions
+{
+    height: 80vh;
+    border-radius: 40px;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1f;
+    background-color: rgba(0, 0, 0, 0.493);
+    display: none;
+}
+
+.gameOptions.active
+{
+    display: grid;
+}
+
+.panel-1
+{
+    border-bottom: 3px solid white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+.panel-2
+{
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+.panel-3
+{
+    border-bottom: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+.panel-4
+{
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+.matches-count
+{
+    position: relative;
+    display: flex;
+    width: 20em;
+    max-height: 38px;
+    height: 3em;
+    overflow: hidden;
+    border-radius: .25em;
+    line-height: 3;
+    font-weight: bold;
+}
+.max-matches
+{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    overflow: hidden;
+    border-radius: .25em;
+    line-height: 3;
+    font-weight: bold;
+}
+.first-move
+{
+    position: relative;
+    display: flex;
+    width: 20em;
+    max-height: 38px;
+    height: 3em;
+    overflow: hidden;
+    border-radius: .25em;
+    line-height: 3;
+    font-weight: bold;
+}
+.hard-level
+{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    overflow: hidden;
+    border-radius: .25em;
+    line-height: 3;
+    font-weight: bold;
+}
+
+
+select
+{
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: #00000062;
+    flex: 1;
+    padding: 0 .5em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+select::-ms-expand
+{
+    display: none;
+
+}
+
+.startGame
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startGame button
+{
+    background-color: #ffffff42;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 9px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.startGame button:hover
+{
+    background-color: #1f963381;
+    font-size: 32px;
+    padding: 12px;
+}
+
+
+.historyPanel
+{
+    height: 80vh;
+    max-width: 300px;
+    min-width: 220px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 13px;
+    background-color: #00000056;
+    display: none;
+}
+.historyPanel.active
+{
+    display: block;
+}
+
+.history-space
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding-top: 4px;
+    margin: 5px;
+}
+.history-name
+{
+    list-style: none;
+    text-align: left;
+}
+.history-count
+{
+    list-style: none;
+    text-align: end;
+}
+.history-item
+{
+    padding-top: 8px;
+}
+.history-title
+{
+    padding: 6px;
+}
+
+.score
+{
+    font-weight: bold;
+    font-size: 85px;
+    background-color: #ffffff5b;
+    padding: 8px;
+    border-radius: 10px;
+    border: 3px solid white;
+    display: none;
+}
+.score.active
+{
+    display: block;
+}
