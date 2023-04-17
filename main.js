@@ -8,6 +8,7 @@ const buttonsPanel = document.querySelector('.take-matches-btn');
 const firstMoveSelect = document.querySelector('.first-move');
 const hardLevelSelect = document.querySelector('.hard-level');
 const gameOptions = document.querySelector('.gameOptions');
+const gamePanel = document.querySelector('.gamePanel');
 const historyPanel = document.querySelector('.historyPanel');
 const historyName = document.querySelector('.history-name');
 const historyCount = document.querySelector('.history-count');
@@ -20,6 +21,7 @@ let hardLevel = 1;
 function StartGame()
 {
     buttonsPanel.classList.add('active');
+    gamePanel.classList.add('active');
 
     historyCount.textContent ='';
     historyName.textContent ='';
@@ -242,6 +244,7 @@ function ComputerTurn()
             gameOptions.classList.add('active');
             historyPanel.classList.remove('active');
             Score.classList.remove('active');
+            gamePanel.classList.remove('active');
         }, 2500);
     }else
     {
@@ -289,6 +292,7 @@ function TakeMatches()
             gameOptions.classList.add('active');
             historyPanel.classList.remove('active');
             Score.classList.remove('active');
+            gamePanel.classList.remove('active');
         }, 2500);
     }else
     {
