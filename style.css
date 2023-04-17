@@ -18,6 +18,9 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 35px;
 }
 
@@ -147,7 +150,7 @@ body
 {
     height: 80vh;
     border-radius: 40px;
-    max-width: 23%;
+    max-width: 400px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr 1f;
@@ -162,7 +165,6 @@ body
 
 .panel-1
 {
-    max-width: 100%;
     border-bottom: 3px solid white;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
