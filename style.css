@@ -13,6 +13,7 @@ html
 body
 {
     min-height: 100vh;
+    width: 100%;
     background-image: linear-gradient(rgb(170, 190, 192) 0%, rgb(80, 94, 107) 100%);
     display: flex;
     justify-content: center;
@@ -23,8 +24,8 @@ body
 .gamePanel
 {
     height: 80vh;
-    min-width: 1320px;
-    max-width: 1320px;
+    min-width: 70%;
+    max-width: 70%;
     background-color: rgba(0, 0, 0, 0.356);
     display: flex;
     position: relative;
@@ -71,7 +72,7 @@ body
 {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 180%;
     font-weight: bold;
     padding-top: 15px;
 }
@@ -92,7 +93,7 @@ body
 .take-matches-btn
 {
     gap: 10px;
-    height: 50vh;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +104,7 @@ body
 {
     display: flex;
     gap: 10px;
-    height: 50vh;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,8 +123,8 @@ body
 
 .take-matches-btn button
 {
-    font-size: 25px;
-    height: 80px;
+    font-size: 145%;
+    min-height: 65%;
     padding: 7px;
     padding-right: 18px;
     padding-left: 18px;
@@ -146,7 +147,7 @@ body
 {
     height: 80vh;
     border-radius: 40px;
-    max-width: 400px;
+    max-width: 23%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr 1f;
@@ -161,6 +162,7 @@ body
 
 .panel-1
 {
+    max-width: 100%;
     border-bottom: 3px solid white;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -171,9 +173,9 @@ body
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 40px;
+    font-size: 240%;
     font-weight: bold;
-    padding: 20px;
+    padding: 4%;
 }
 .panel-2
 {
@@ -184,7 +186,7 @@ body
     text-align: center;
     flex-wrap: wrap;
     color: white;
-    font-size: 40px;
+    font-size: 240%;
     font-weight: bold;
     padding: 20px;
 }
@@ -198,7 +200,7 @@ body
     align-items: center;
     flex-wrap: wrap;
     color: white;
-    font-size: 40px;
+    font-size: 240%;
     font-weight: bold;
     padding: 20px;
 }
@@ -210,7 +212,7 @@ body
     align-items: center;
     flex-wrap: wrap;
     color: white;
-    font-size: 40px;
+    font-size: 240%;
     font-weight: bold;
     padding: 20px;
 }
