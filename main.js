@@ -159,10 +159,19 @@ function ComputerTurn()
             let randomMatches = Math.floor(Math.random() * matchesToTake) + 1;
             for (let k = 0; k < randomMatches; k++)
             {
-               matches.removeChild(matches.firstChild);
+                if (matches.hasChildNodes()){
+                    matches.removeChild(matches.firstChild);
+                }
             }
-           currentNumber.innerHTML -= randomMatches;
-           number = randomMatches;
+            if (Number(currentNumber.innerHTML) >= randomMatches)
+            {
+                currentNumber.innerHTML -= randomMatches;
+                number = randomMatches;
+            }else
+            {
+                number = Number(currentNumber.innerHTML);
+                currentNumber.innerHTML = 0;
+            }
         }
     }else
     {
@@ -210,10 +219,19 @@ function ComputerTurn()
             let randomMatches = Math.floor(Math.random() * matchesToTake) + 1;
             for (let k = 0; k < randomMatches; k++)
             {
-               matches.removeChild(matches.firstChild);
+                if (matches.hasChildNodes()){
+                    matches.removeChild(matches.firstChild);
+                }
             }
-           currentNumber.innerHTML -= randomMatches;
-           number = randomMatches;
+            if (Number(currentNumber.innerHTML) >= randomMatches)
+            {
+                currentNumber.innerHTML -= randomMatches;
+                number = randomMatches;
+            }else
+            {
+                number = Number(currentNumber.innerHTML);
+                currentNumber.innerHTML = 0;
+            }
         }
     }
 
@@ -331,7 +349,6 @@ function SelectChange3(event)
     {
         playerStarting = true;
     }
-
 }
 function SelectChange4(event)
 {
